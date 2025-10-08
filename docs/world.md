@@ -88,3 +88,6 @@ world:removeDroppedItem(DropUID) -- Removes a dropped item by its UID.
 world:isGameActive() -- Returns true if the game is active.
 world:onGameWinHighestScore() -- Returns the game's highest win score.
 ```
+
+---
+[Back](../README.md)
