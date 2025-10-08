@@ -59,5 +59,3 @@ registerLuaCommand({
 * Always check player roles before executing sensitive commands.
 * All examples use the **GrowSoft Lua API**.
 * For detailed object methods and properties, refer to the linked documentation above.
-
-```
