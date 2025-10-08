@@ -1,6 +1,23 @@
+
 # GrowSoft Callback Templates
 
 ---
+
+## onPlayerCommandCallback(world, player, commandName)
+
+**Includes:**  
+- [World](./world.md)  
+- [Player](./player.md)
+
+```lua
+onPlayerCommandCallback(function(world, player, fullCommand)
+    -- world = World Object
+    -- player = Player Object
+    -- fullCommand = command player trigger
+    -- return false to disable command on situation
+    -- code here
+end)
+```
 
 ## onPlayerDialogCallback(world, player, data)
 
@@ -529,7 +546,3 @@ onPlayerGemsObtainedCallback(function(world, player, amount)
     -- code here
 end)
 ```
-
----
-
-[Back](../README.md)
