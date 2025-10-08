@@ -13,7 +13,7 @@
 Here are the main sections of the GrowSoft scripting API:
 
 - [Callback](docs/callback.md) – Events and callbacks triggered by the game.  
-- [Server & Global](docs/server-and-global.md) – Server-wide and global functions.  
+- [Server & Global](docs/server-and-global.md) – Servevr-wide and global functions.  
 - [Dialog Syntax](docs/dialog-syntax.md) – Syntax for in-game dialogs.  
 - [Player](docs/player.md) – Player object, methods, and properties.  
 - [World](docs/world.md) – World object, methods, and properties.  
@@ -22,12 +22,12 @@ Here are the main sections of the GrowSoft scripting API:
 - [Inventory Item](docs/inventory-item.md) – Methods like `player:getInventoryItems()` returning [Item](docs/item.md) Object instances.  
 - [Drop](docs/drop.md) – Methods like `world:getDroppedItems()` returning [Item](docs/item.md) Object instances.  
 - [OS Library](docs/os-lib.md) – Operating system utility functions.  
-- [Libraries](docs/http-and-json.md) – HTTP requests and JSON utilities.  
-- [Miscellaneous](docs/miscellanous.md) – Other utility functions and helpers.  
+- [Libraries](docs/http-and-json.md) – HTTP requests and JSON utilities.
 
 ---
 
 ## Examples
+some examples luascript [here](./scripts)
 
 ### Registering a Command
 
@@ -50,6 +50,19 @@ registerLuaCommand({
     roleRequired = 7,
     description = "Clears the current world."
 })
+```
+
+## get Coordinate from Tile
+
+```lua
+local xCoor, yCoor = tile:getPosX() / 32, tile:getPosY() / 32
+```
+
+## Teleport Player Sample
+
+```lua
+local pixel = 32
+world:setPlayerPosition(player,51*pixel,2*32) //teleport to tile(51,2)
 ```
 
 ---
