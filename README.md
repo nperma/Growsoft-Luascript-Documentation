@@ -55,7 +55,8 @@ registerLuaCommand({
 ## get Coordinate from Tile
 
 ```lua
-local xCoor, yCoor = tile:getPosX() / 32, tile:getPosY() / 32
+local xCoor = tile:getPosX() / 32
+local yCoor = tile:getPosY() / 32
 ```
 
 ## Teleport Player Sample
