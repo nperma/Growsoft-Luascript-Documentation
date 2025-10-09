@@ -19,6 +19,16 @@ player:removeCoins(amount, sendPacket:optional) -- Removes coins from the player
 
 ---
 
+## Player Position
+
+```lua
+player:getPosX()
+player:getPosY()
+player:getMiddlePosX()
+```
+
+---
+
 ## Player Inventory
 
 ```lua
