@@ -15,6 +15,8 @@ world:getName() -- Returns the world's name.
 world:getID() -- Returns the world's ID.
 world:getSizeX() -- Returns the horizontal size of the world.
 world:getSizeY() -- Returns the vertical size of the world.
+world:getWorldSizeX()
+world:getWorldSizeY()
 world:getTiles() -- Returns a table of all tiles in the world.
 world:getTilesByActionType(actionType) -- Returns tiles with a specific action type.
 ````
