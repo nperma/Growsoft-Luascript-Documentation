@@ -82,6 +82,40 @@ end)
 
 ---
 
+## onPlayerPunchPlayerCallback(player,world,target_player)
+
+**Includes:**
+
+* [World](./world.md)
+* [Player](./player.md)
+
+```lua
+onPlayerPunchPlayerCallback(function(player,world,target_player)
+    -- world = World Object
+    -- player = Player Object 
+    -- target_player = Player Object
+end)
+```
+
+---
+
+## onPlayerPunchPlayerCallback(player,world,target_player)
+
+**Includes:**
+
+* [World](./world.md)
+* [Player](./player.md)
+
+```lua
+onPlayerPunchNPCCallback(function(player,world,target_npc)
+    -- world = World Object
+    -- player = Player Object 
+    -- target_npc = Player Object
+end)
+```
+
+---
+
 ## onPlayerLoginCallback(player)
 
 **Includes:**
