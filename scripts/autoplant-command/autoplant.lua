@@ -86,7 +86,7 @@ onPlayerDialogCallback(function(world, player, data)
 
         world:setTileForeground(tile, seed_id)
         
-        tile:setTileDataInt(TileDataProperties.TILE_DATA_TYPE_SEED_FRUITS_COUNT, math.random(1,4))
+        tile:setTileDataInt(0, math.random(1,4))
         
         world:updateTile(tile)
 
