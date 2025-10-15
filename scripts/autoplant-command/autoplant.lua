@@ -68,7 +68,7 @@ onPlayerDialogCallback(function(world, player, data)
 
             if belowTile then
                 local belowID = belowTile:getTileID()
-                if belowID ~= nil and belowID ~= 0 then
+                if belowID ~= nil and belowID ~= 0 and belowTile:getTileItem():getGrowTime() == 0 then
                     table.insert(emptyTiles, tile)
                 end
             end
@@ -85,8 +85,8 @@ onPlayerDialogCallback(function(world, player, data)
         if count >= amount_seed then break end
 
         world:setTileForeground(tile, seed_id)
-        
-        tile:setTileDataInt(0, math.random(1,4))
+        tile:setTileData(1, os.time() - (tile:getGrowTime() / 2))
+        tile:setTileData(0, math.random(1,4))
         
         world:updateTile(tile)
 
