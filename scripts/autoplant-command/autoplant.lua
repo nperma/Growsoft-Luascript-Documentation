@@ -19,9 +19,7 @@ local form = "set_default_color|`o\n"..
              "end_dialog|ap_dialog||"
 
 onPlayerCommandCallback(function(w, p, c)
-    if c:lower() ~= commandName then
-        return false
-    end
+    if c:lower() == commandName then
 
     if not w:getOwner(p) then
         p:onTalkBubble(p:getNetID(), "`cOnly the world owner can use this.", 0)
@@ -30,6 +28,8 @@ onPlayerCommandCallback(function(w, p, c)
 
     p:onDialogRequest(form)
     return true
+   end
+  return false
 end)
 
 onPlayerDialogCallback(function(world, player, data)
@@ -85,7 +85,7 @@ onPlayerDialogCallback(function(world, player, data)
         if count >= amount_seed then break end
 
         world:setTileForeground(tile, seed_id)
-        tile:setTileData(1, os.time() - (tile:getGrowTime() / 2))
+        tile:setTileData(1, os.time() - (item:getGrowTime() / 2))
         tile:setTileData(0, math.random(1,4))
         
         world:updateTile(tile)
